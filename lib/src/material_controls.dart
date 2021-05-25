@@ -79,7 +79,7 @@ class _MaterialControlsState extends State<MaterialControls>
                   offset: Offset(0.0, _hideStuff ? kToolbarHeight * 0.8 : 0.0),
                   child: _buildSubtitles(context, chewieController.subtitle!),
                 ),
-              const Expanded(
+               Expanded(
                   child: _buildBottomBar(context),),
             ],
           ),
