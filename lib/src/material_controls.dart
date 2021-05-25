@@ -79,8 +79,7 @@ class _MaterialControlsState extends State<MaterialControls>
                   offset: Offset(0.0, _hideStuff ? kToolbarHeight * 0.8 : 0.0),
                   child: _buildSubtitles(context, chewieController.subtitle!),
                 ),
-               Expanded(
-                  child: _buildBottomBar(context),),
+               _buildBottomBar(context),
             ],
           ),
         ),
@@ -165,18 +164,6 @@ class _MaterialControlsState extends State<MaterialControls>
         Row(
           children: <Widget>[
             _buildPlayPause(controller),
-            if (chewieController.isLive)
-              const Expanded(child: Text('LIVE'))
-            else
-              _buildPosition(iconColor),
-            if (chewieController.isLive)
-              const SizedBox()
-            else
-              _buildProgressBar(),
-            _buildSubtitleToggle(),
-            if (chewieController.allowPlaybackSpeedChanging)
-              _buildSpeedButton(controller),
-            if (chewieController.allowMuting) _buildMuteButton(controller),
             if (chewieController.allowFullScreen) _buildExpandButton(),
           ],
         ),
