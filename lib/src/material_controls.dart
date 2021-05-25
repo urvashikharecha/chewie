@@ -162,6 +162,7 @@ class _MaterialControlsState extends State<MaterialControls>
         color: Theme.of(context).dialogBackgroundColor,
         child: 
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             _buildPlayPause(controller),
             if (chewieController.allowFullScreen) _buildExpandButton(),
