@@ -79,7 +79,8 @@ class _MaterialControlsState extends State<MaterialControls>
                   offset: Offset(0.0, _hideStuff ? kToolbarHeight * 0.8 : 0.0),
                   child: _buildSubtitles(context, chewieController.subtitle!),
                 ),
-              _buildBottomBar(context),
+              const Expanded(
+                  child: _buildBottomBar(context),),
             ],
           ),
         ),
@@ -158,7 +159,7 @@ class _MaterialControlsState extends State<MaterialControls>
       opacity: _hideStuff ? 0.0 : 1.0,
       duration: const Duration(milliseconds: 300),
       child: Container(
-        height: barHeight,
+       // height: barHeight,
         color: Theme.of(context).dialogBackgroundColor,
         child: 
         Row(
