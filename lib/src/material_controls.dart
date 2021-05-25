@@ -160,7 +160,7 @@ class _MaterialControlsState extends State<MaterialControls>
       child: Container(
         height: barHeight,
         color: Theme.of(context).dialogBackgroundColor,
-        child: Expanded(child: 
+        child: 
         Row(
           children: <Widget>[
             _buildPlayPause(controller),
@@ -178,7 +178,7 @@ class _MaterialControlsState extends State<MaterialControls>
             if (chewieController.allowMuting) _buildMuteButton(controller),
             if (chewieController.allowFullScreen) _buildExpandButton(),
           ],
-        ),),
+        ),
       ),
     );
   }
